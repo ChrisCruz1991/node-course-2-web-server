@@ -38,15 +38,19 @@ hbs.registerHelper('screamIt', text => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageName: 'Home Page',
-    currentYear: new Date().getFullYear(),
     welcomeMessage: 'Welcome to my website'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageName: 'About Page',
-    currentYear: new Date().getFullYear()
+    pageName: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageName: 'Projects Page Page'
   });
 });
 
